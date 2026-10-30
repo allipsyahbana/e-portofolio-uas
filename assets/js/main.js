@@ -1,21 +1,7 @@
 /* ============ E-PORTOFOLIO ALLIP — main.js ============ */
 
 document.addEventListener('DOMContentLoaded', () => {
-  /* ---------- 8. Hentikan video saat tab siklus diganti ---------- */
-  const mainVideo = document.getElementById('videoPembelajaran');
-  if (mainVideo) {
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        if (!mainVideo.paused) mainVideo.pause();
-      });
-    });
-    // Hentikan juga saat modal PDF atau lightbox dibuka
-    document.addEventListener('click', e => {
-      if (e.target.closest('.dokumen-card, .galeri-item')) {
-        if (!mainVideo.paused) mainVideo.pause();
-      }
-    });
-  }
+
   /* ---------- 1. Navbar: shadow saat scroll ---------- */
   const navbar = document.getElementById('navbar');
   const onScroll = () => {
